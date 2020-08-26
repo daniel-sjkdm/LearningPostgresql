@@ -43,3 +43,8 @@ $ psql -h localhost -p 5432 -d hospital -u postgres
 - [ ] Add constraints
 - [ ] Create triggers
 - [ ] Create views
+
+
+## Resources
+
+[Install PGADMIN4](https://www.tecmint.com/install-postgresql-and-pgadmin-in-ubuntu/)
