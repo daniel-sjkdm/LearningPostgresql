@@ -18,7 +18,7 @@ class DBConnection():
         self.cur = self.conn.cursor()
     def execute(self, query):
         self.cur.execute(query)
-        return self.fetchall()
+        return self.cur.fetchall()
     def close(self, action):
         if action == 'cursor':
             self.cur.close()
