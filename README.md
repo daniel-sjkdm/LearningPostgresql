@@ -56,6 +56,27 @@ $ psql -h localhost -p 5432 -d hospital -u postgres
 ```
 
 
+### Importing/Exporting csv files 
+
+There are times where the data is in csv format and once we created the database and the needed tables we want to import 
+it to populate the database.
+
+#### Importing csv
+
+Two ways to do this:
+
+1. Using psql's command __copy__ (from terminal, server side)
+2. Using psql's command __/copy__ (from postgres terminal, client side)
+
+##### Client side
+
+The header argument is optional, you use it only when the file has headers.
+
+```pg
+\copy <table_name> from '<path_to_csv_file>' csv header;
+```
+
+ 
 
 
 ## Hospital Database
@@ -85,7 +106,7 @@ The possible entities based on the specification are:
 ### Todo
 
 - [x] Create the database schema
-- [ ] Download sample data from mockaroo (as .csv)
+- [x] Download sample data from mockaroo (as .csv)
 - [ ] Insert data into the tables
 - [ ] Create users
 - [ ] Manage user permissions
@@ -97,3 +118,5 @@ The possible entities based on the specification are:
 ## Resources
 
 [Install PGADMIN4](https://www.tecmint.com/install-postgresql-and-pgadmin-in-ubuntu/)
+
+[Import csv files](https://popsql.com/learn-sql/postgresql/how-to-import-a-csv-in-postgresql)
