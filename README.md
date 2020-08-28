@@ -3,9 +3,31 @@ Learning how to setup a database and how to manage it by using postgresql RDBMS.
 
 A relational database is made of _entities_ that represents real objects via _attributes_ or _features_ and also their relationships are represented as one of the following:
 
-+ One to one
-+ One to many
-+ Many to many
++ One to one: a man is currently married with one and only woman (ideally).
++ One to many: a scientist has many Nobel Prizes, but a given Prize Nobel can be owned by only one a scientist.
++ Many to many: a product can be purchased by many buyers and a buyer can purchase many products.
+
+
+To understand the basic and advanced features of databases I'll create one that will manage a set of hospitals owned by one company.
+
+
+Basic Features:
++ Creating, deleting a database
++ Creating, deleting, updating tables
++ Adding constraints to tables:
+  + Primary key
+  + Foreign key
+  + Check
++ Creating, deleting, managin users
+  + Permissions
+  + Roles
+
+
+Advances Features:
++ Views 
++ Triggers 
++ Stored procedures
++ Backups
 
 
 
@@ -32,6 +54,33 @@ your password:
 ```sh
 $ psql -h localhost -p 5432 -d hospital -u postgres
 ```
+
+
+
+
+## Hospital Database
+
+There is a set of hospitals, each one has an associated speciality but an speciality maybe shared by one or more hospitals. 
+The hospitals also have a set of consulting rooms that are unique to each one. 
+An speciality has a fixed cost but it can also include another studies such as XRAY imaging, blood analysis, etc.
+
+
+
+### Entities
+
+The possible entities based on the specification are:
+
++ Hospital
++ Speciality
++ Consulting room
++ Patient
++ Appointment
++ Medical Record
+
+  
+### Database schema
+
+
 
 ### Todo
 
