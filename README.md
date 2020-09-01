@@ -7,6 +7,12 @@ A relational database is made of _entities_ that represents real objects via _at
 + One to many: a scientist has many Nobel Prizes, but a given Prize Nobel can be owned by only one a scientist.
 + Many to many: a product can be purchased by many buyers and a buyer can purchase many products.
 
+A RDBMS is made up of the following:
++ DDL (Data Definition Language)
++ DQL (Data Query Language)
++ DML (Data Manipulation Language)
+
+
 
 To understand the basic and advanced features of databases I'll create one that will manage a set of hospitals owned by one company.
 
@@ -24,6 +30,7 @@ Basic Features:
 
 
 Advances Features:
++ Functions
 + Views 
 + Triggers 
 + Stored procedures
@@ -107,7 +114,7 @@ The possible entities based on the specification are:
 
 - [x] Create the database schema
 - [x] Download sample data from mockaroo (as .csv)
-- [ ] Insert data into the tables
+- [x] Insert data into the tables
 - [ ] Create users
 - [ ] Manage user permissions
 - [ ] Add constraints
