@@ -1,5 +1,6 @@
 from dbconnection.connection import DBConnection
 from dotenv import load_dotenv
+from pprint import pprint
 import os
 
 
@@ -24,3 +25,5 @@ if __name__ == '__main__':
 
     if db.conn.status == 1:
         print("Conected to the database!")
+    result = db.execute('SELECT first_name as Name, age as Age, occupation as Ocuppation FROM person WHERE age > 50')
+    pprint(result)
